@@ -1,0 +1,4 @@
+-Add option to input a timecode in hh:mm:ss[.xxx] format
+-Cleaner standard output stream
+-Improve code readability
+*FFMS_CreateVideoSource and FFMS_Init seem to have memory leaks...?
