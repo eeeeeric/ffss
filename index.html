@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
+    <title>ffss by eeeeeric</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>ffss</h1>
+        <h2>Take high quality, frame accurate* snapshots from videos</h2>
+
+        <section id="downloads">
+          <a href="https://github.com/eeeeeric/ffss/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/eeeeeric/ffss/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/eeeeeric/ffss" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1>
+<a name="ffss---fabulous-fabulous-snapshots" class="anchor" href="#ffss---fabulous-fabulous-snapshots"><span class="octicon octicon-link"></span></a>ffss - fabulous fabulous snapshots</h1>
+
+<p>ffss is a CLI tool for taking high quality screenshots from video files.</p>
+
+<p>Depends: ffmpegsource, libpng++, boost</p>
+
+<p>To build, just run </p>
+
+<pre><code>make
+</code></pre>
+
+<p>usage:     ffss [options] inputfile</p>
+
+<p>Examples: To get frames 100, 200, 300 from input.mkv</p>
+
+<pre><code>ffss -f 100 -f 200 -f 300 input.mkv
+</code></pre>
+
+<p>The output snapshots are saved as</p>
+
+<pre><code>snapshot_${FRAMENUM}${FRAMETYPE}.png
+</code></pre>
+
+<p>where "snapshot" is the default prefix.
+You can specify the prefix with </p>
+
+<pre><code>-o,--output
+</code></pre>
+
+<p>If you wanted to save the index for later</p>
+
+<pre><code>ffss --index input.ffvideoindex -f 100 input.mkv
+</code></pre>
+
+<p>Running the previous command again will re-use the index, which will save
+time with large videos.</p>
+
+<p>It is also possible to specify the input file with </p>
+
+<pre><code>-i,--input
+</code></pre>
+
+<p>if you desire.</p>
+      </section>
+    </div>
+
+    
+  </body>
+</html>
