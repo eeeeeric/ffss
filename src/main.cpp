@@ -292,7 +292,7 @@ int FFMS_CC indexProgress(int64_t Current, int64_t Total, void *ICPrivate)
     int progress = (Current*100/Total);
     if (progress > *(int*)ICPrivate)
     {
-        cout << "Indexing: " << progress << "% \r";
+        cout << "Indexing: " << progress << "% \r" << flush;
     }
     return 0;
 }

@@ -18,6 +18,7 @@ Examples: To get frames 100, 200, 300 from input.mkv
 The output snapshots are saved as
 
     snapshot_${FRAMENUM}${FRAMETYPE}.png
+    
 where "snapshot" is the default prefix.
 You can specify the prefix with 
 
