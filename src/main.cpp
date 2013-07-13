@@ -1,4 +1,5 @@
-// Create high quality, frame accurate snapshots of video files
+// Create high quality, frame accurate* snapshots of video files
+// *most of the time at least
 // Copyright (C) 2013 Eric Zheng
 
 // This program is free software: you can redistribute it and/or modify
