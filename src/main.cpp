@@ -179,14 +179,7 @@ int main(int argc, char * argv[]) {
     if (options.debug)
         cout << "Destroying index.\n";
     FFMS_DestroyIndex(index);
-
-    /* Retrieve video properties so we know what we're getting.
-    As the lack of the errmsg parameter indicates, this function cannot fail. */
-    const FFMS_VideoProperties *videoprops = FFMS_GetVideoProperties(videosource);
-
-    /* Now you may want to do something with the info, like check how many frames the video has */
-    int num_frames = videoprops->NumFrames;
-    
+  
     /* Get the first frame for examination so we know what we're getting. This is required
     because resolution and colorspace is a per frame property and NOT global for the video. */
     const FFMS_Frame *propframe = FFMS_GetFrame(videosource, 0, &errinfo);
